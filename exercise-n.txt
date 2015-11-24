@@ -1,28 +1,25 @@
-EXERCISE 10 ///////////////////////////////////////////////
+EXERCISE 11 ///////////////////////////////////////////////
 
-mysql> Select count(*) from Entry where birthday <'1982-02-12';
+mysql> select count(*) from Entry where type != 'other';                                                   
 +----------+
 | count(*) |
 +----------+
-|     2687 |
+|     2800 |
 +----------+
 1 row in set (0.00 sec)
 
-
-mysql> Select count(*) from Entry where birthday >='1965-01-01';
+mysql> select count(*) from Entry where type = 'work' or type = 'home';
 +----------+
 | count(*) |
 +----------+
-|     2597 |
+|     2800 |
 +----------+
-1 row in set (0.01 sec)
+1 row in set (0.00 sec)
 
-mysql> 
-
-mysql> select min(birthday) from Entry;
-+---------------------+
-| min(birthday)       |
-+---------------------+
-| 1945-09-02 09:21:58 |
-+---------------------+
+mysql> select count(*) from Entry where subtype = 'phone';                                                 
++----------+
+| count(*) |
++----------+
+|      600 |
++----------+
 1 row in set (0.00 sec)
