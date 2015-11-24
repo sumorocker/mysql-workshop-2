@@ -1,9 +1,5 @@
-EXERCISE 5 //////////////////////////////////////////////////////////
+EXERCISE 6 //////////////////////////////////////////////////////////
 
-
-mysql> truncate table Entry;
-Query OK, 0 rows affected (0.02 sec)
-
-mysql> select* from Entry;
-Empty set (0.00 sec)
+mysql> drop table Account;
+Query OK, 0 rows affected (0.01 sec)
 
