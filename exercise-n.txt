@@ -1,44 +1,29 @@
 EXERCISE 3/////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-mysql> update Entry set email = 'dsgs' where Id = 1;                                                                                                            
-Query OK, 1 row affected (0.03 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
+mysql> select* from Entry
+    -> ;
++----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName | birthday | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |             0 |           | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+|  2 |             0 |           | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+|  3 |             0 |           | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
 
-mysql> update Entry set email = 'soup' where Id = 2;                                                                                                            
-Query OK, 1 row affected (0.03 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
-
+mysql> select* from Account
+    -> ;
 +----+-------+----------+---------------------+------------+
 | id | email | password | createdOn           | modifiedOn |
 +----+-------+----------+---------------------+------------+
 |  1 | dsgs  |          | 0000-00-00 00:00:00 | NULL       |
-|  2 | soup  |          | 0000-00-00 00:00:00 | NULL       |
+|  2 |       |          | 0000-00-00 00:00:00 | NULL       |
 +----+-------+----------+---------------------+------------+
 2 rows in set (0.00 sec)
-
-mysql> update Entry set accountId = '400' where Id = 2;                                                                                                            
-Query OK, 1 row affected (0.03 sec)
-Rows matched: 1  Changed: 1  Warnings: 0
 
 mysql> select* from AddressBook;
 +----+-----------+------+---------------------+------------+
 | id | accountId | name | createdOn           | modifiedOn |
 +----+-----------+------+---------------------+------------+
-|  1 |       400 |      | 0000-00-00 00:00:00 | NULL       |
+|  1 |         0 |      | 0000-00-00 00:00:00 | NULL       |
 +----+-----------+------+---------------------+------------+
 1 row in set (0.00 sec)
-
-update Entry set firstName = 'Jackson'' at line 1
-mysql> update Entry set firstName = 'Jackson';
-Query OK, 2 rows affected (0.01 sec)
-Rows matched: 3  Changed: 2  Warnings: 0
-
-mysql> select* from Entry;
-+----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
-| id | addressBookId | firstName | lastName | birthday | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
-+----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
-|  1 |             0 | Jackson   | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
-|  2 |             0 | Jackson   | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
-|  3 |             0 | Jackson   | NULL     | NULL     | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
-+----+---------------+-----------+----------+----------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
-3 rows in set (0.00 sec)
